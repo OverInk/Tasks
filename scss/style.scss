@@ -1,1 +1,39 @@
 @import "nullstyle.scss";
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+@font-face {
+	font-family: 'SF-UI-Text-Normal';
+	src: url('../fonts/SFUIText-Regular.woff2') format('woff2'),
+		 url('../fonts/SFUIText-Regular.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+@font-face {
+	font-family: 'SF-UI-Text-Medium';
+	src: url('../fonts/SFUIText-Medium.woff2') format('woff2'),
+		 url('../fonts/SFUIText-Medium.woff') format('woff');
+	font-weight: 900;
+	font-style: normal;
+	font-display: swap;
+}
+
+// body{
+// 	font-family: "Poppins", sans-serif;
+// 	font-weight: 700px;
+// 	color: #1d262c;
+// 	font-size: 36px;
+// }
+h1{
+	font-size: 36px;
+   font-family: "Poppins", sans-serif;
+	color: #1d262c;
+}
+.test-font {
+	font-family: 'SF-UI-Text-Normal', 'Arial';
+}
+
+.test2{
+	font-family: 'SF-UI-Text-Medium','Arial';
+}
