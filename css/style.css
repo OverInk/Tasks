@@ -82,10 +82,6 @@ img {
   font-style: normal;
   font-display: swap;
 }
-.test-font {
-  font-family: "SF-UI-Text-Normal";
-}
-
 .test2 {
   font-family: "SF-UI-Text-Medium", "Arial";
 }
@@ -125,4 +121,51 @@ h1 {
   line-height: 9px;
   color: #FFFFFF;
   padding-left: 8px;
+}
+
+.task__line {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.task__name-text {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  color: #000000;
+}
+.task__process {
+  font-family: "SF-UI-Text-Normal";
+  color: #F2994A;
+  font-weight: 400;
+  font-size: 11px;
+  line-height: 18px;
+  padding: 1px 18px;
+  border-radius: 8.5px;
+  background-color: rgba(242, 153, 74, 0.2);
+}
+.task__statys {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.task__starys-ring {
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  vertical-align: middle;
+}
+.task__statys-text {
+  color: #5C626D;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 15px;
+  margin-left: 4px;
+}
+.ring-1 {
+  border: 1px solid #219653;
 }
