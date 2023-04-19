@@ -12,17 +12,21 @@
 <body>
 	<div class="wrapper">
 		<div class="search"></div>
-		<h1>You've got <span class="crimson">7 task</span> today</h1>
+		<div class="all__tasks">
+			<h1>You've got <span class="crimson">7 task</span> today</h1>
+			<button class="button__new-task">
+				<img src="./img/Plus.svg" alt="Плюсик, для добавления формы">
+				<div class="new__task">Add new</div>
+			</button>
+		</div>
 		<div class="hold">
-			<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatem, eius voluptatibus aspernatur optio
-				voluptatum omnis, atque asperiores quod sequi rem illum, et doloremque? Error, modi molestiae reprehenderit
-				at et debitis.</p>
-			<p class="test-font">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quos ratione laborum vero
-				provident id! Sint animi sunt consectetur dignissimos, harum assumenda velit iste. Aperiam et dicta nostrum
-				excepturi? Veniam, aut.</p>
-			<p class="test2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam aliquid aliquam quas voluptatum
-				inventore incidunt at maiores cumque. Labore totam similique doloribus itaque. Voluptates doloremque
-				explicabo voluptatibus, velit delectus veritatis!</p>
+			<label for=""> On Hold</label>
+			<div class="task__line">
+				<div class="task__name"></div>
+				<div class="task__process"></div>
+				<div class="task__statys"></div>
+				<div class="task__edit"></div>
+			</div>
 		</div>
 		<div class="completed"></div>
 	</div>
