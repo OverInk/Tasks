@@ -29,11 +29,10 @@ $color-statys-green: #219653;
 $color-statys-orange: #F2C94C;
 $color-status-red: #EB5757;
 
-
-.test2{
-	font-family: 'SF-UI-Text-Medium','Arial';
+// ОБЩИЕ КЛАССЫ ===================================================
+.container{
+	margin: 0px 206px 0px 279px;
 }
-
 .all__tasks {
 	display: flex;
 	flex-direction: row;
@@ -44,6 +43,7 @@ h1{
    font-family: $poppins;
 	color: $color-other-black;
 	font-weight: 700;
+	margin: 0px 0px 0px 267px;
 }
 .crimson {
 	color: #F3477A;
@@ -65,9 +65,6 @@ h1{
 	font-size: 12px;
 	line-height: 9px;
 	color: #FFFFFF;
-	padding-left: 8px;
-}
-.hold {
 }
 .name__task{
 	font-family: $poppins;
@@ -75,6 +72,7 @@ h1{
 	font-weight: 400;
 	font-size: 18px;
 	line-height: 27px;
+	margin: 41px 0px 32px 0px;
 }
 .task {
 
@@ -161,15 +159,29 @@ h1{
 	border-radius: 50%;
 }
 .button__edit-tochka{
-	
+	height: 3px;
+	width: 3px;
+	margin: 0 auto;
+	background: #DCD9D9;
+	border-radius: 50%;
 }
-.button__edit::after {
+.button__edit-tochka::after {
 	content: "";
 	display: block;
-   transform: translateX(3.54px);
-   background-color: #F5F5F5;
-   height: 0.8px;
-   width: 0.8px;
+	transform: translate(5px, -3px);
+   background: #DCD9D9;
+   height: 3px;
+   width: 3px;
+	border-radius: 50%;
+}
+.button__edit-tochka::before {
+	content: "";
+	display: block;
+   transform: translateX(-5px);
+   background: #DCD9D9;
+   height: 3px;
+   width: 3px;
+	border-radius: 50%;
 }
 
 
