@@ -152,6 +152,16 @@ h1{
 	border-radius: 50%;
 	background: linear-gradient(133.9deg, rgba(243, 71, 122, 0.7) 0.24%, rgba(136, 76, 178, 0.7) 95.04%);
 }
+.process-blue{
+	background-color: rgba(86, 204, 242, 0.2);
+	color: $color-blue;
+}
+.statys-normal{
+	border: 2px solid $color-statys-orange;
+}
+.statys-critical{
+	border: 2px solid $color-status-red;
+}
 .button__edit{
 	width: 22px;
 	height: 22px;

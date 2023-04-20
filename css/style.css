@@ -203,6 +203,19 @@ h1 {
   background: linear-gradient(133.9deg, rgba(243, 71, 122, 0.7) 0.24%, rgba(136, 76, 178, 0.7) 95.04%);
 }
 
+.process-blue {
+  background-color: rgba(86, 204, 242, 0.2);
+  color: #56CCF2;
+}
+
+.statys-normal {
+  border: 2px solid #F2C94C;
+}
+
+.statys-critical {
+  border: 2px solid #EB5757;
+}
+
 .button__edit {
   width: 22px;
   height: 22px;
