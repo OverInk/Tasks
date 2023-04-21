@@ -136,11 +136,16 @@ h1 {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 39px;
+}
+.task__line:last-child {
+  margin-bottom: 0px;
 }
 .task__name {
   display: flex;
   flex-direction: row;
   align-items: center;
+  width: 100%;
 }
 .task__name-figura {
   position: absolute;
@@ -163,15 +168,17 @@ h1 {
   font-weight: 400;
   font-size: 11px;
   line-height: 18px;
-  padding: 1px 18px;
+  padding: 1px 10px;
   border-radius: 8.5px;
   background-color: rgba(242, 153, 74, 0.2);
+  width: 16%;
 }
 .task__statys {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  width: 100%;
 }
 .task__starys-ring {
   display: inline-block;
@@ -217,7 +224,7 @@ h1 {
 }
 
 .button__edit {
-  width: 22px;
+  width: 5%;
   height: 22px;
   background: #F2F2F2;
   border-radius: 50%;
