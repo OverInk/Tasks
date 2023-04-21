@@ -86,6 +86,27 @@ img {
   margin: 0px 206px 0px 279px;
 }
 
+body {
+  background: url(../img/main_bg.svg) center no-repeat;
+}
+
+.wrapper {
+  background: #FFFFFF;
+  margin: 140px 63px 160px 63px;
+  border-radius: 30px;
+}
+
+.search {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100;
+  padding: 78px 0px 56px 258.5px;
+}
+.search input {
+  padding-left: 15px;
+}
+
 .all__tasks {
   display: flex;
   flex-direction: row;
@@ -172,6 +193,7 @@ h1 {
   border-radius: 8.5px;
   background-color: rgba(242, 153, 74, 0.2);
   width: 16%;
+  text-align: center;
 }
 .task__statys {
   display: flex;
