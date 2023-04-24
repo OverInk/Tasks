@@ -23,7 +23,8 @@ $montserrat: "Montserrat", sans-serif;
 $color-just-black: #000000;
 $color-other-black:#1d262c;
 $color-orange: #F2994A;
-$color-blue: #56CCF2;
+$color-process-blue: #56CCF2;
+$color-process-green:#27AE60;
 $color-dark-green: #5C626D;
 $color-statys-green: #219653;
 $color-statys-orange: #F2C94C;
@@ -43,13 +44,12 @@ body{
 }
 .search {
 	display: flex;
-	flex-direction: row;
 	align-items: center;
-	width: 100;
 	padding: 78px 0px 56px 258.5px;
 
 	& input{
 		padding-left: 15px;
+		
 	}
 }
 
@@ -79,6 +79,29 @@ h1{
 	border-radius: 10px;
 	margin-left: 20px;
 }
+.hold{
+	padding-bottom: 49px;
+}
+.hold-margin{
+	margin-bottom: 32px;
+}
+.completed-box{
+	display: flex;
+	flex-direction:row ;
+	margin-bottom: 32px;
+	align-items: center;
+}
+.status-completed{
+	font-family: 'SF-UI-Text-Normal';
+	color: #EB5757;
+	font-weight: 400;
+	font-size: 10px;
+	line-height: 18px;
+	padding: 1px 10px;
+	border-radius: 8.5px;
+	background: rgba(235, 87, 87, 0.2);
+	text-align: center;
+}
 .new__task{
 	font-family: $poppins;
 	font-style: normal;
@@ -93,7 +116,6 @@ h1{
 	font-weight: 400;
 	font-size: 18px;
 	line-height: 27px;
-	padding-bottom: 32px;
 }
 .task {
 
@@ -101,7 +123,7 @@ h1{
 			display: flex;
 			justify-content: space-between;
 			align-items: center;
-			margin-bottom: 39px;
+			margin-bottom: 44px;
 			
 			&:last-child{
 				margin-bottom: 0px;
@@ -112,7 +134,7 @@ h1{
 		display: flex;
 		flex-direction: row;
 		align-items: center;
-		width: 100%;
+		width: 110%;
 	}
 
 	&__name-figura {
@@ -141,8 +163,21 @@ h1{
 			padding: 1px 10px;
 			border-radius: 8.5px;
 			background-color: rgba(242, 153, 74, 0.2);
-			width: 16%;
+			width: 18%;
 			text-align: center;
+		}
+
+		&__process-inactive{
+			font-family: 'SF-UI-Text-Normal';
+			color: #EB5757;
+			font-weight: 400;
+			font-size: 10px;
+			line-height: 18px;
+			padding: 1px 10px;
+			border-radius: 8.5px;
+			background: rgba(235, 87, 87, 0.2);
+			text-align: center;
+			margin-left: 10px;
 		}
 
 		&__statys {
@@ -150,7 +185,7 @@ h1{
 			flex-direction: row;
 			justify-content: center;
 			align-items: center;
-			width: 100%;
+			width: 70%;
 		}
 		
 
@@ -183,9 +218,16 @@ h1{
 	border-radius: 50%;
 	background: linear-gradient(133.9deg, rgba(243, 71, 122, 0.7) 0.24%, rgba(136, 76, 178, 0.7) 95.04%);
 }
+.line-opacity{
+	opacity: 0.2;
+}
 .process-blue{
 	background-color: rgba(86, 204, 242, 0.2);
-	color: $color-blue;
+	color: $color-process-blue;
+}
+.process-green{
+	color: $color-process-green;
+	background: rgba(39, 174, 96, 0.2);
 }
 .statys-normal{
 	border: 2px solid $color-statys-orange;
@@ -200,7 +242,6 @@ h1{
 	border-radius: 50%;
 }
 .edit-none{
-	// opacity: 0;
 	visibility: hidden;
 }
 .button__edit-tochka{

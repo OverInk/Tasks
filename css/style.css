@@ -98,9 +98,7 @@ body {
 
 .search {
   display: flex;
-  flex-direction: row;
   align-items: center;
-  width: 100;
   padding: 78px 0px 56px 258.5px;
 }
 .search input {
@@ -136,6 +134,33 @@ h1 {
   margin-left: 20px;
 }
 
+.hold {
+  padding-bottom: 49px;
+}
+
+.hold-margin {
+  margin-bottom: 32px;
+}
+
+.completed-box {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 32px;
+  align-items: center;
+}
+
+.status-completed {
+  font-family: "SF-UI-Text-Normal";
+  color: #EB5757;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 18px;
+  padding: 1px 10px;
+  border-radius: 8.5px;
+  background: rgba(235, 87, 87, 0.2);
+  text-align: center;
+}
+
 .new__task {
   font-family: "Poppins", sans-serif;
   font-style: normal;
@@ -151,14 +176,13 @@ h1 {
   font-weight: 400;
   font-size: 18px;
   line-height: 27px;
-  padding-bottom: 32px;
 }
 
 .task__line {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 39px;
+  margin-bottom: 44px;
 }
 .task__line:last-child {
   margin-bottom: 0px;
@@ -167,7 +191,7 @@ h1 {
   display: flex;
   flex-direction: row;
   align-items: center;
-  width: 100%;
+  width: 110%;
 }
 .task__name-figura {
   position: absolute;
@@ -193,15 +217,27 @@ h1 {
   padding: 1px 10px;
   border-radius: 8.5px;
   background-color: rgba(242, 153, 74, 0.2);
-  width: 16%;
+  width: 18%;
   text-align: center;
+}
+.task__process-inactive {
+  font-family: "SF-UI-Text-Normal";
+  color: #EB5757;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 18px;
+  padding: 1px 10px;
+  border-radius: 8.5px;
+  background: rgba(235, 87, 87, 0.2);
+  text-align: center;
+  margin-left: 10px;
 }
 .task__statys {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  width: 100%;
+  width: 70%;
 }
 .task__starys-ring {
   display: inline-block;
@@ -233,9 +269,18 @@ h1 {
   background: linear-gradient(133.9deg, rgba(243, 71, 122, 0.7) 0.24%, rgba(136, 76, 178, 0.7) 95.04%);
 }
 
+.line-opacity {
+  opacity: 0.2;
+}
+
 .process-blue {
   background-color: rgba(86, 204, 242, 0.2);
   color: #56CCF2;
+}
+
+.process-green {
+  color: #27AE60;
+  background: rgba(39, 174, 96, 0.2);
 }
 
 .statys-normal {
