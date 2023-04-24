@@ -82,12 +82,12 @@ img {
   font-style: normal;
   font-display: swap;
 }
-.container {
-  margin: 0px 206px 0px 279px;
-}
-
 body {
   background: url(../img/main_bg.svg) center no-repeat;
+}
+
+.container {
+  padding: 0px 206px 77px 279px;
 }
 
 .wrapper {
@@ -110,6 +110,7 @@ body {
 .all__tasks {
   display: flex;
   flex-direction: row;
+  padding-bottom: 49px;
 }
 
 h1 {
@@ -150,7 +151,7 @@ h1 {
   font-weight: 400;
   font-size: 18px;
   line-height: 27px;
-  margin: 41px 0px 32px 0px;
+  padding-bottom: 32px;
 }
 
 .task__line {
@@ -250,6 +251,10 @@ h1 {
   height: 22px;
   background: #F2F2F2;
   border-radius: 50%;
+}
+
+.edit-none {
+  visibility: hidden;
 }
 
 .button__edit-tochka {
