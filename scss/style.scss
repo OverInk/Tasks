@@ -18,6 +18,7 @@
 	font-style: normal;
 	font-display: swap;
 }
+// ПАРАМЕТРЫ======================================================
 $poppins: "Poppins", sans-serif;
 $montserrat: "Montserrat", sans-serif;
 $color-just-black: #000000;
@@ -42,6 +43,7 @@ body{
 	margin: 140px 63px 160px 63px;
 	border-radius: 30px;
 }
+// ПОИСК==========================================================
 .search {
 	display: flex;
 	align-items: center;
@@ -53,11 +55,11 @@ body{
 		width: 250px;
 	}
 }
-
-.all__tasks {
+//НАЗВАНИЕ + КНОПКА===============================================
+.title__tasks {
 	display: flex;
 	flex-direction: row;
-	padding-bottom: 49px;
+	padding: 0px 0px 49px 267px;
 }
 
 h1{
@@ -65,7 +67,6 @@ h1{
    font-family: $poppins;
 	color: $color-other-black;
 	font-weight: 700;
-	margin: 0px 0px 0px 267px;
 }
 .crimson {
 	color: #F3477A;
@@ -80,6 +81,17 @@ h1{
 	border-radius: 10px;
 	margin-left: 20px;
 }
+
+.new__task{
+	font-family: $poppins;
+	font-style: normal;
+	font-weight: 400;
+	font-size: 12px;
+	line-height: 9px;
+	color: #FFFFFF;
+}
+
+// БЛОК С АКТИВНЫМИ И НЕАКТИВНЫМИ ЗАДАЧАМИ============================
 .hold{
 	padding-bottom: 49px;
 }
@@ -92,25 +104,8 @@ h1{
 	margin-bottom: 32px;
 	align-items: center;
 }
-.status-completed{
-	font-family: 'SF-UI-Text-Normal';
-	color: #EB5757;
-	font-weight: 400;
-	font-size: 10px;
-	line-height: 18px;
-	padding: 1px 10px;
-	border-radius: 8.5px;
-	background: rgba(235, 87, 87, 0.2);
-	text-align: center;
-}
-.new__task{
-	font-family: $poppins;
-	font-style: normal;
-	font-weight: 400;
-	font-size: 12px;
-	line-height: 9px;
-	color: #FFFFFF;
-}
+
+// ПАРАМЕТРЫ ДЛЯ САМИХ ЗАДАЧ========================================
 .name__task{
 	font-family: $poppins;
 	color: $color-other-black;
@@ -207,6 +202,8 @@ h1{
 			margin-left: 4px;
 		}
 }
+
+// ДОП ПАРАМЕТРЫ================================================
 .ring-1 {
 	border: 2px solid $color-statys-green;
 }
@@ -236,6 +233,7 @@ h1{
 .statys-critical{
 	border: 2px solid $color-status-red;
 }
+// КНОПКА РЕГУЛИРОВКИ ДЛЯ ДВУХ БЛОКОВ
 .button__edit{
 	width: 5%;
 	height: 22px;
@@ -271,4 +269,50 @@ h1{
 	border-radius: 50%;
 }
 
+@media screen and (min-width:1501px) and (max-width:1920px) {
+	body{
+		background-size: cover;
+	}
+	.wrapper{
+		margin: 215px 63px 200px 63px
+	}
+	.task__statys{
+		width: 60%;
+	}
+	.button__edit{
+		width: 4%;
+	}
+}
+@media screen and (max-width:1410px) {
+	.container {
+		padding: 0px 206px 77px 206px;
+  }
+  .search {
+	padding: 78px 0px 56px 185.5px;
+	}
+  .title__tasks {
+	padding: 0px 0px 49px 194px;
+	}
+	.button__edit{
+		width: 6%;
+	}
+	.task__statys{
+		width: 50%;
+	}
+}
+
+@media screen and (max-width:1270px) {
+	.container {
+		padding: 0px 180px 77px 180px;
+  }
+  .search {
+	padding: 78px 0px 56px 151.5px;
+	}
+  .title__tasks {
+	padding: 0px 0px 49px 168px;
+	}
+	.task__name{
+		width: 85%;
+	}
+}
 
