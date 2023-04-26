@@ -84,6 +84,7 @@ img {
 }
 body {
   background: url(../img/main_bg.svg) center no-repeat;
+  background-size: cover;
 }
 
 .container {
@@ -320,9 +321,6 @@ h1 {
 }
 
 @media screen and (min-width: 1501px) and (max-width: 1920px) {
-  body {
-    background-size: cover;
-  }
   .wrapper {
     margin: 215px 63px 200px 63px;
   }
@@ -361,6 +359,71 @@ h1 {
     padding: 0px 0px 49px 168px;
   }
   .task__name {
-    width: 85%;
+    width: 95%;
+  }
+}
+@media screen and (max-width: 1075px) {
+  .wrapper {
+    margin: 80px 63px 80px 63px;
+  }
+  .container {
+    padding: 0px 120px 77px 120px;
+  }
+  .search {
+    padding: 45px 0px 56px 91.5px;
+  }
+  .title__tasks {
+    padding: 0px 0px 49px 108px;
+  }
+  .task__statys {
+    width: 22%;
+  }
+}
+@media screen and (max-width: 900px) {
+  .title__tasks {
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+  h1 {
+    padding-bottom: 20px;
+  }
+  .button__new-task {
+    width: 180px;
+    margin-left: 0px;
+  }
+  .task__line {
+    flex-wrap: wrap;
+  }
+  .task__name {
+    padding-bottom: 10px;
+  }
+  .button__edit {
+    width: 5%;
+  }
+}
+@media screen and (max-width: 750px) {
+  .button__edit {
+    width: 6%;
+  }
+}
+@media screen and (max-width: 707px) {
+  .wrapper {
+    margin: 50px 40px 50px 40px;
+  }
+  .container {
+    padding: 0px 60px 77px 60px;
+  }
+  .title__tasks {
+    padding: 0px 60px 49px 60px;
+    line-height: 42px;
+  }
+  .search {
+    padding: 45px 0px 56px 60px;
+  }
+  .task__process-inactive {
+    width: 38%;
+  }
+  .button__edit {
+    width: 6%;
   }
 }
