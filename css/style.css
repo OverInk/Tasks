@@ -411,19 +411,59 @@ h1 {
     margin: 50px 40px 50px 40px;
   }
   .container {
-    padding: 0px 60px 77px 60px;
+    padding: 0px 60px 50px 60px;
   }
   .title__tasks {
     padding: 0px 60px 49px 60px;
     line-height: 42px;
   }
+  .task__process {
+    width: 80px;
+  }
   .search {
     padding: 45px 0px 56px 60px;
   }
-  .task__process-inactive {
-    width: 38%;
-  }
   .button__edit {
-    width: 6%;
+    width: 21px;
+  }
+}
+@media screen and (max-width: 540px) {
+  .search {
+    padding: 38px 0px 28px 40px;
+  }
+  .container {
+    padding: 0px 40px 77px 40px;
+  }
+  .title__tasks {
+    padding: 0px 40px 25px 40px;
+  }
+  h1 {
+    font-size: 30px;
+  }
+  .button__new-task {
+    width: 137px;
+  }
+  .task__name {
+    width: 100%;
+  }
+  .hold {
+    padding-bottom: 33px;
+  }
+}
+@media screen and (max-width: 425px) {
+  .wrapper {
+    margin: 30px 20px 30px 20px;
+  }
+  .search {
+    padding: 38px 0px 28px 30px;
+  }
+  .title__tasks {
+    padding: 0px 30px 25px 30px;
+  }
+  h1 {
+    font-size: 24px;
+  }
+  .container {
+    padding: 0px 30px 40px 30px;
   }
 }
