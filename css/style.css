@@ -145,6 +145,14 @@ h1 {
   color: #FFFFFF;
 }
 
+.js__button {
+  display: none;
+}
+
+.js__button.active {
+  display: flex;
+}
+
 .hold {
   padding-bottom: 49px;
 }

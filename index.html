@@ -14,7 +14,7 @@
 		<div class="search">
 			<img src="./img/Poisk.svg" alt="Иконка к поиском">
 			<form>
-				<input type="text" placeholder="Search for any training you want">
+				<input id="InputSearch" type="text" placeholder="Search for any training you want">
 			</form>
 		</div>
 		<div class="title__tasks">
@@ -23,6 +23,20 @@
 				<img src="./img/Plus.svg" alt="Плюсик, для добавления формы">
 				<div class="new__task">Add new</div>
 			</button>
+			<div class="js__button">
+				<div class="task__name">
+					<div class="task__name-figura">
+						<div class="ring-2"></div>
+					</div>
+					<div class="task__name-text"></div>
+				</div>
+				<div class="task__process">Pending</div>
+				<div class="task__statys">
+					<div class="task__starys-ring ring-1"></div>
+					<div class="task__statys-text">Minor</div>
+				</div>
+				<button type="button" class="btn-cancel" onclick="closeForm()">Закрыть</button>
+			</div>
 		</div>
 		<div class="container">
 			<div class="hold">
@@ -149,6 +163,7 @@
 		</div>
 	</div>
 
+	<script src="./js/script.js"></script>
 </body>
 
 </html>
