@@ -91,16 +91,32 @@ h1{
 	line-height: 9px;
 	color: #FFFFFF;
 }
-
+// ДЛЯ JS===========================================================
 .js__button{
-	display: none;
+	position: fixed;
+   top: 26%;
+   left: 21.5%;
+   width: 50%;
+   height: 7%;
+   background: white;
+   opacity: 0; 
+   pointer-events: none;
+   transition: 0.5s all;
+	display: flex;
+   justify-content: center;
+   align-items: center;
+   padding: 21px;
+	border: 2px solid gray;
+   border-radius: 10px;
 }
 
 .js__button.active{
-	display: flex;
+	opacity: 1; 
+   pointer-events: all; // Возвращаем события
+   transition: 0.5s all;
 }
 
-// БЛОК С АКТИВНЫМИ И НЕАКТИВНЫМИ ЗАДАЧАМИ============================
+// БЛОК С АКТИВНЫМИ И НЕАКТИВНЫМИ ЗАДАЧАМИ========================
 .hold{
 	padding-bottom: 49px;
 }

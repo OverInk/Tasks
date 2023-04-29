@@ -2,11 +2,18 @@
 
 const button__task = document.querySelector('.button__new-task');
 const form__newtask = document.querySelector('.js__button');
+const closeForm = document.querySelector('.btn-cancel');
 
-button__task.addEventListener("click", function () {
-	form__newtask.classList.toggle('active');
+// Показывает окошко при нажатии ADD NEW (TASK)
+button__task.addEventListener('click', function (e) {
+	e.preventDefault(); // Предотвращаем дефолтное поведение браузера
+	form__newtask.classList.add('active');
 });
 
+// При нажатии CLOSE закрывается форма
+closeForm.addEventListener('click', () => { // Вешаем обработчик на Close
+	form__newtask.classList.remove('active');
+});
 
 document.addEventListener("keyup", func_search);
 
@@ -26,5 +33,5 @@ function func_search() {
 	}
 }
 
-https://ru.stackoverflow.com/questions/1301091/%D0%9F%D0%BE%D0%B8%D1%81%D0%BA-%D1%81-%D1%84%D0%B8%D0%BB%D1%8C%D1%82%D1%80%D0%BE%D0%BC-%D1%87%D0%B5%D1%80%D0%B5%D0%B7-input
+// https://ru.stackoverflow.com/questions/1301091/%D0%9F%D0%BE%D0%B8%D1%81%D0%BA-%D1%81-%D1%84%D0%B8%D0%BB%D1%8C%D1%82%D1%80%D0%BE%D0%BC-%D1%87%D0%B5%D1%80%D0%B5%D0%B7-input
 
