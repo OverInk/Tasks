@@ -6,13 +6,20 @@ const closeForm = document.querySelector('.btn-cancel');
 
 // Показывает окошко при нажатии ADD NEW (TASK)
 button__task.addEventListener('click', function (e) {
-	e.preventDefault(); // Предотвращаем дефолтное поведение браузера
+	e.preventDefault(); // Убирается дефолтное поведение браузера
 	form__newtask.classList.add('active');
 });
 
 // При нажатии CLOSE закрывается форма
-closeForm.addEventListener('click', () => { // Вешаем обработчик на Close
+closeForm.addEventListener('click', () => { //обработчик на Close
 	form__newtask.classList.remove('active');
+});
+
+//Если нажали снова на ADD NEW . то форма тоже закроется
+document.addEventListener('click', (e) => {
+	if (e.target === button__task) {
+		form__newtask.classList.remove('active');
+	}
 });
 
 document.addEventListener("keyup", func_search);
