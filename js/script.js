@@ -22,6 +22,19 @@ document.addEventListener('click', (e) => {
 	}
 });
 
+const editTask = document.querySelector('.button__edit');
+const completedTask = document.querySelector('.close__after-js');
+
+editTask.addEventListener('click', function (e) {
+	e.preventDefault(); // Убирается дефолтное поведение браузера
+	completedTask.classList.add('active');
+});
+document.addEventListener('click', (e) => {
+	if (e.target === editTask) {
+		completedTask.classList.remove('active');
+	}
+});
+
 document.addEventListener("keyup", func_search);
 
 function func_search() {
