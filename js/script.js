@@ -35,23 +35,24 @@ document.addEventListener('click', (e) => {
 	}
 });
 
-document.addEventListener("keyup", func_search);
-
-function func_search() {
-	let input = document.getElementById("InputSearch");
-	let filter = input.value.toUpperCase();
-	let list__task = document.getElementById(".task__line");
-
-	// Перебирайте все элементы списка и скрывайте те, которые не соответствуют поисковому запросу
-	for (let i = 0; i < list__task; i++) {
-		let a = list__task[i].getElementsByTagName()[0];
-		if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
-			list__task[i].style.display = "";
-		} else {
-			list__task[i].style.display = "none";
-		}
-	}
-}
 
 // https://ru.stackoverflow.com/questions/1301091/%D0%9F%D0%BE%D0%B8%D1%81%D0%BA-%D1%81-%D1%84%D0%B8%D0%BB%D1%8C%D1%82%D1%80%D0%BE%D0%BC-%D1%87%D0%B5%D1%80%D0%B5%D0%B7-input
 
+// const searchInput = document.querySelector('search-input');
+// const searchBtn = document.querySelector('search-btn');
+// const resultList = document.querySelector('result-list');
+
+// const words = ['apple', 'banana', 'cherry', 'date', 'fig'];
+
+// //Функция для поиска слов по первым буквам
+// function searchByFirstLetter(event6) {
+// 	resultList.innerHTML = '';
+// 	const firstLetter = searchInput.value.charAt(0);
+// 	const filterWords = words.filter(word => word.charAt(0) === firstLetter);
+// 	filterWords.forEach(word => {
+// 		const li = document.createElement('li');
+// 		li.innerText = word;
+// 		resultList.appendChild(li);
+// 	});
+// };
+// searchBtn.addEventListener('click', searchByFirstLetter);
