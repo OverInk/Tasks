@@ -65,7 +65,14 @@ h1{
 }
 
 .tema{
-	background: white;
+	position: fixed;
+	cursor: pointer;
+	top: 50%;
+	left: 10%;
+	transform: translateY(-50%);
+	padding: 10px;
+	background: #FFFFFF;
+	border-radius: 10px;
 	box-shadow: 0 0 10px rgba(39, 38, 40, 0.4);
 }
 
