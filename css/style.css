@@ -109,15 +109,25 @@ body {
 }
 
 .theme {
-  position: fixed;
+  position: absolute;
+  z-index: 101;
   cursor: pointer;
-  top: 50%;
-  left: 10%;
-  transform: translateY(-50%);
+  top: 18%;
+  right: 12%;
   padding: 10px;
-  background: #FFFFFF;
+  background-color: #FFFFFF;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(39, 38, 40, 0.4);
+}
+
+#dark-tema {
+  background: url(../img/dark-theme.svg) center no-repeat;
+  background-size: cover;
+}
+
+#light-tema {
+  background: url(../img/light-theme.svg) center no-repeat;
+  background-size: cover;
 }
 
 .title__tasks {
