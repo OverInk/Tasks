@@ -116,7 +116,15 @@ h1 {
   background: rgb(188, 187, 187);
 }
 
+.process-blue {
+  background-color: rgba(86, 204, 242, 0.2);
+  color: #56CCF2;
+}
+
 .theme {
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(39, 38, 40, 0.4);
+  box-shadow: 0 0 13px rgba(39, 38, 40, 0.5);
+}
+
+.button__edit {
+  background: #F2F2F2;
 }
