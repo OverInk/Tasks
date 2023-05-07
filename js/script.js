@@ -45,17 +45,17 @@ document.addEventListener('click', (e) => {
 // const words = ['apple', 'banana', 'cherry', 'date', 'fig'];
 
 // //Функция для поиска слов по первым буквам
-// function searchByFirstLetter(event6) {
-// 	resultList.innerHTML = '';
-// 	const firstLetter = searchInput.value.charAt(0);
-// 	const filterWords = words.filter(word => word.charAt(0) === firstLetter);
-// 	filterWords.forEach(word => {
-// 		const li = document.createElement('li');
-// 		li.innerText = word;
-// 		resultList.appendChild(li);
-// 	});
-// };
-// searchBtn.addEventListener('click', searchByFirstLetter);
+function searchByFirstLetter(event6) {
+	resultList.innerHTML = '';
+	const firstLetter = searchInput.value.charAt(0);
+	const filterWords = words.filter(word => word.charAt(0) === firstLetter);
+	filterWords.forEach(word => {
+		const li = document.createElement('li');
+		li.innerText = word;
+		resultList.appendChild(li);
+	});
+};
+searchBtn.addEventListener('click', searchByFirstLetter);
 
 
 let changeTemaBtn = document.querySelectorAll('.change-tema');
