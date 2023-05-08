@@ -44,20 +44,27 @@ document.addEventListener('click', (e) => {
 
 // const words = ['apple', 'banana', 'cherry', 'date', 'fig'];
 
-// //Функция для поиска слов по первым буквам
-function searchByFirstLetter(event6) {
-	resultList.innerHTML = '';
-	const firstLetter = searchInput.value.charAt(0);
-	const filterWords = words.filter(word => word.charAt(0) === firstLetter);
-	filterWords.forEach(word => {
-		const li = document.createElement('li');
-		li.innerText = word;
-		resultList.appendChild(li);
-	});
-};
-searchBtn.addEventListener('click', searchByFirstLetter);
+function searchTasks() {
+	let input = document.getElementById("search");
+	let filter = input.value.toUpperCase();
+	let tasks = document.getElementById("tasks");
+
+	let li = tasks.getElementsByClassName(".task__line");
+
+	for (let i = 0; i < li.length; i++) {
+		let taskTitle = li[i].getElementsByClassName("task__name-text")[0];
+		let taskTitleText = taskTitle.innerText.toUpperCase();
+
+		if (taskTitleText.indexOf(filter) > -1) {
+			li[i].style.display = "";
+		} else {
+			li[i].style.display = "none";
+		}
+	}
+}
 
 
+// СМЕНА ТЕМЫ НА ТЕМНУЮ И НАОБОРОТ ( с сохранением выбора)===========
 let changeTemaBtn = document.querySelectorAll('.change-tema');
 console.log(changeTemaBtn);
 changeTemaBtn.forEach(button => {
