@@ -264,6 +264,9 @@ h1 {
   align-items: center;
   width: 110%;
 }
+.task__name input {
+  width: 350px;
+}
 .task__name-figura {
   position: absolute;
   width: 9px;

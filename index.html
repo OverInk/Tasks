@@ -15,8 +15,28 @@
 		<div class="search">
 			<img src="./img/Poisk.svg" alt="Иконка к поиском">
 			<form>
-				<input id="InputSearch" type="text" placeholder="Search for any training you want">
+				<input id="input-search" type="text" placeholder="Search for any training you want">
 			</form>
+			<button id="search-btn">Search</button>
+			<ul id="results-list"></ul>
+		</div>
+		<button id="add-task-btn">Добавить задачу</button>
+		<ul id="task-list"></ul>
+
+		<div id="add-task-modal" class="modal">
+			<div class="modal-content">
+				<span class="close">&times;</span>
+				<h2>Добавление задачи</h2>
+				<form id="add-task-form">
+					<label for="task-name">Название задачи:</label>
+					<input type="text" id="task-name" name="task-name" required>
+					<br>
+					<label for="task-desc">Описание задачи:</label>
+					<textarea id="task-desc" name="task-desc"></textarea>
+					<br>
+					<input type="submit" value="Добавить задачу">
+				</form>
+			</div>
 		</div>
 		<div class="theme">
 			<svg class="change-tema" data-theme="light" id="light-tema" width="40" height="40" fill="none">
@@ -24,8 +44,8 @@
 			<svg class="change-tema" data-theme="dark" id="dark-tema" width="40" height="40" fill="none">
 			</svg>
 		</div>
-		<label for="search">Поиск задач:</label>
-		<input type="text" id="search" onkeyup="searchTasks()" placeholder="Введите название задачи">
+		<!-- <label for="search">Поиск задач:</label>
+		<input type="text" id="search" onkeyup="searchTasks()" placeholder="Введите название задачи"> -->
 		<div class="title__tasks">
 			<h1>You've got <span class="crimson">7 task</span> today</h1>
 			<button class="button__new-task">
@@ -37,7 +57,7 @@
 					<div class="task__name-figura">
 						<div class="ring-2"></div>
 					</div>
-					<div class="task__name-text"></div>
+					<input type="text" id="task-name" class="task__name-text" required>
 				</div>
 				<div class="task__process">Pending</div>
 				<div class="task__statys">

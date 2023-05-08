@@ -22,6 +22,53 @@ document.addEventListener('click', (e) => {
 	}
 });
 
+
+
+// Добавление задачи
+const addTaskModal = document.getElementById("add-task-modal");
+const closeBtn = document.querySelector(".close");
+const addTaskBtn = document.getElementById("add-task-btn");
+const taskList = document.getElementById("task-list");
+const addTaskForm = document.getElementById("add-task-form");
+
+// Отображение модального окна
+addTaskBtn.addEventListener("click", function () {
+	addTaskModal.style.display = "block";
+});
+
+// Закрытие модального окна
+closeBtn.addEventListener("click", function () {
+	addTaskModal.style.display = "none";
+});
+
+// Добавление задачи
+addTaskForm.addEventListener("submit", function (event) {
+	event.preventDefault();
+
+	// Получение данных из формы
+	const taskName = document.getElementById("task-name").value;
+	const taskDesc = document.getElementById("task-desc").value;
+
+	// Создание нового элемента списка
+	const li = document.createElement("li");
+	const h3 = document.createElement("h3");
+	const p = document.createElement("p");
+
+	h3.textContent = taskName;
+	p.textContent = taskDesc;
+
+	li.appendChild(h3);
+	li.appendChild(p);
+
+	taskList.appendChild(li);
+
+	// Очистка формы и закрытие модального окна
+	addTaskForm.reset();
+	addTaskModal.style.display = "none";
+});
+
+
+// Кнопка для редактирования. Появляется окошко COMPLETED
 const editTask = document.querySelector('.button__edit');
 const completedTask = document.querySelector('.close__after-js');
 
@@ -35,33 +82,55 @@ document.addEventListener('click', (e) => {
 	}
 });
 
+// ПОПЫТКА ПОИСКА
+const searchInput = document.getElementById('input-search');
+const searchBtn = document.getElementById('search-btn');
+const resultsList = document.getElementById('results-list');
 
-// https://ru.stackoverflow.com/questions/1301091/%D0%9F%D0%BE%D0%B8%D1%81%D0%BA-%D1%81-%D1%84%D0%B8%D0%BB%D1%8C%D1%82%D1%80%D0%BE%D0%BC-%D1%87%D0%B5%D1%80%D0%B5%D0%B7-input
+// массив со словами для поиска
+const words = ['apple', 'banana', 'cherry', 'date', 'elderberry', 'fig', 'grape', 'honeydew'];
 
-// const searchInput = document.querySelector('search-input');
-// const searchBtn = document.querySelector('search-btn');
-// const resultList = document.querySelector('result-list');
+// функция для поиска слов по первым буквам
+function searchByFirstLetter(event) {
+	// очищаем список результатов
+	resultsList.innerHTML = '';
 
-// const words = ['apple', 'banana', 'cherry', 'date', 'fig'];
+	// получаем первую букву из поля ввода
+	const firstLetter = searchInput.value.charAt(0);
 
-function searchTasks() {
-	let input = document.getElementById("search");
-	let filter = input.value.toUpperCase();
-	let tasks = document.getElementById("tasks");
+	// ищем слова, у которых первая буква соответствует введенной
+	const filteredWords = words.filter(word => word.charAt(0) === firstLetter);
 
-	let li = tasks.getElementsByClassName(".task__line");
-
-	for (let i = 0; i < li.length; i++) {
-		let taskTitle = li[i].getElementsByClassName("task__name-text")[0];
-		let taskTitleText = taskTitle.innerText.toUpperCase();
-
-		if (taskTitleText.indexOf(filter) > -1) {
-			li[i].style.display = "";
-		} else {
-			li[i].style.display = "none";
-		}
-	}
+	// добавляем найденные слова в список результатов
+	filteredWords.forEach(word => {
+		const li = document.createElement('li');
+		li.innerText = word;
+		resultsList.appendChild(li);
+	});
 }
+
+// назначаем обработчик события на кнопку поиска
+searchBtn.addEventListener('click', searchByFirstLetter);
+
+
+// function searchTasks() {
+// 	let input = document.getElementById("search");
+// 	let filter = input.value.toUpperCase();
+// 	let tasks = document.getElementById("tasks");
+
+// 	let li = tasks.getElementsByClassName(".task__line");
+
+// 	for (let i = 0; i < li.length; i++) {
+// 		let taskTitle = li[i].getElementsByClassName("task__name-text")[0];
+// 		let taskTitleText = taskTitle.innerText.toUpperCase();
+
+// 		if (taskTitleText.indexOf(filter) > -1) {
+// 			li[i].style.display = "";
+// 		} else {
+// 			li[i].style.display = "none";
+// 		}
+// 	}
+// }
 
 
 // СМЕНА ТЕМЫ НА ТЕМНУЮ И НАОБОРОТ ( с сохранением выбора)===========

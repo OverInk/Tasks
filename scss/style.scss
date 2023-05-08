@@ -170,6 +170,7 @@ h1{
 	background-color: gray;
 }
 
+
 // БЛОК С АКТИВНЫМИ И НЕАКТИВНЫМИ ЗАДАЧАМИ========================
 .hold{
 	padding-bottom: 49px;
@@ -210,6 +211,9 @@ h1{
 		flex-direction: row;
 		align-items: center;
 		width: 110%;
+		& input {
+			width: 350px;
+		}
 	}
 
 	&__name-figura {
