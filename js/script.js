@@ -24,7 +24,7 @@ document.addEventListener('click', (e) => {
 
 
 
-// Добавление задачи
+// Добавление задачи (проба)
 const addTaskModal = document.getElementById("add-task-modal");
 const closeBtn = document.querySelector(".close");
 const addTaskBtn = document.getElementById("add-task-btn");
@@ -42,7 +42,7 @@ closeBtn.addEventListener("click", function () {
 });
 
 // Добавление задачи
-addTaskForm.addEventListener("submit", function (event) {
+addTaskForm.addEventListener("click", function (event) {
 	event.preventDefault();
 
 	// Получение данных из формы
@@ -65,6 +65,30 @@ addTaskForm.addEventListener("submit", function (event) {
 	// Очистка формы и закрытие модального окна
 	addTaskForm.reset();
 	addTaskModal.style.display = "none";
+});
+
+
+
+
+// МОЯ ПРОБА
+// const button__task = document.querySelector('.button__new-task');
+// const form__newtask = document.querySelector('.js__button');
+const holdList = document.querySelector('.hold');
+
+form__newtask.addEventListener("submit", function (eventt) {
+	eventt.preventDefault();
+
+	const taskName = document.getElementById('task-name').value;
+	const divMine = document.createElement('div');
+	divMine.classList.add('task-line');
+	const divText = document.createElement('div');
+	divText.classList.add('task__name-text');
+
+	divText.textContent = taskName;
+	divMine.appendChild(divText);
+	holdList.appendChild(divMine);
+
+	form__newtask.reset();
 });
 
 
@@ -111,26 +135,6 @@ function searchByFirstLetter(event) {
 
 // назначаем обработчик события на кнопку поиска
 searchBtn.addEventListener('click', searchByFirstLetter);
-
-
-// function searchTasks() {
-// 	let input = document.getElementById("search");
-// 	let filter = input.value.toUpperCase();
-// 	let tasks = document.getElementById("tasks");
-
-// 	let li = tasks.getElementsByClassName(".task__line");
-
-// 	for (let i = 0; i < li.length; i++) {
-// 		let taskTitle = li[i].getElementsByClassName("task__name-text")[0];
-// 		let taskTitleText = taskTitle.innerText.toUpperCase();
-
-// 		if (taskTitleText.indexOf(filter) > -1) {
-// 			li[i].style.display = "";
-// 		} else {
-// 			li[i].style.display = "none";
-// 		}
-// 	}
-// }
 
 
 // СМЕНА ТЕМЫ НА ТЕМНУЮ И НАОБОРОТ ( с сохранением выбора)===========
