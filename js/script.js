@@ -36,10 +36,14 @@ form__newtask.addEventListener("submit", function (eventt) {
 	divMine.classList.add('task-line');
 	const divText = document.createElement('div');
 	divText.classList.add('task__name-text');
+	const divTest = document.createElement('div');
+	divTest.classList.add('task__process');
 
 	divText.textContent = taskName;
 	divMine.appendChild(divText);
 	holdList.appendChild(divMine);
+	divTest.textContent = 'Pending';
+	holdList.appendChild(divTest);
 
 	form__newtask.reset();
 });
