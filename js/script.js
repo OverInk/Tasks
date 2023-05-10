@@ -23,53 +23,6 @@ document.addEventListener('click', (e) => {
 });
 
 
-
-// Добавление задачи (проба)
-const addTaskModal = document.getElementById("add-task-modal");
-const closeBtn = document.querySelector(".close");
-const addTaskBtn = document.getElementById("add-task-btn");
-const taskList = document.getElementById("task-list");
-const addTaskForm = document.getElementById("add-task-form");
-
-// Отображение модального окна
-addTaskBtn.addEventListener("click", function () {
-	addTaskModal.style.display = "block";
-});
-
-// Закрытие модального окна
-closeBtn.addEventListener("click", function () {
-	addTaskModal.style.display = "none";
-});
-
-// Добавление задачи
-addTaskForm.addEventListener("click", function (event) {
-	event.preventDefault();
-
-	// Получение данных из формы
-	const taskName = document.getElementById("task-name").value;
-	const taskDesc = document.getElementById("task-desc").value;
-
-	// Создание нового элемента списка
-	const li = document.createElement("li");
-	const h3 = document.createElement("h3");
-	const p = document.createElement("p");
-
-	h3.textContent = taskName;
-	p.textContent = taskDesc;
-
-	li.appendChild(h3);
-	li.appendChild(p);
-
-	taskList.appendChild(li);
-
-	// Очистка формы и закрытие модального окна
-	addTaskForm.reset();
-	addTaskModal.style.display = "none";
-});
-
-
-
-
 // МОЯ ПРОБА
 // const button__task = document.querySelector('.button__new-task');
 // const form__newtask = document.querySelector('.js__button');

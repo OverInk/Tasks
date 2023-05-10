@@ -20,24 +20,6 @@
 			<button id="search-btn">Search</button>
 			<ul id="results-list"></ul>
 		</div>
-		<button id="add-task-btn">Добавить задачу</button>
-		<ul id="task-list"></ul>
-
-		<div id="add-task-modal" class="modal">
-			<div class="modal-content">
-				<span class="close">&times;</span>
-				<h2>Добавление задачи</h2>
-				<form id="add-task-form">
-					<label for="task-name">Название задачи:</label>
-					<input type="text" id="task-name" name="task-name" required>
-					<br>
-					<label for="task-desc">Описание задачи:</label>
-					<textarea id="task-desc" name="task-desc"></textarea>
-					<br>
-					<input type="submit" value="Добавить задачу">
-				</form>
-			</div>
-		</div>
 		<div class="theme">
 			<svg class="change-tema" data-theme="light" id="light-tema" width="40" height="40" fill="none">
 			</svg>
@@ -52,7 +34,7 @@
 				<img src="./img/Plus.svg" alt="Плюсик, для добавления формы">
 				<div class="new__task">Add new</div>
 			</button>
-			<div class="js__button">
+			<form class="js__button">
 				<div class="task__name">
 					<div class="task__name-figura">
 						<div class="ring-2"></div>
@@ -66,7 +48,7 @@
 				</div>
 				<button type="button" class="btn-cancel">Close</button>
 				<input type="submit" value="Add">
-			</div>
+			</form>
 		</div>
 		<div class="container">
 			<div class="hold">
