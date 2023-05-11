@@ -31,7 +31,6 @@ const holdList = document.querySelector('.hold');
 form__newtask.addEventListener("submit", function (eventt) {
 	eventt.preventDefault();
 
-	const taskName = document.getElementById('task-name').value;
 	const taskLine = document.querySelector('.task__line');
 	const divMine = document.createElement('div');
 	divMine.classList.add('task__line');
@@ -44,7 +43,20 @@ form__newtask.addEventListener("submit", function (eventt) {
 	holdList.appendChild(divMine);
 
 	form__newtask.reset();
+
 });
+// Попытка сохранить новые задачи (ПРОВАЛ)
+document.addEventListener("DOMContentLoaded", function () {
+	document.querySelectorAll('textarea, input').forEach(function (e) {
+		if (e.value === '') e.value = window.localStorage.getItem(e.name, e.value);
+		e.addEventListener('input', function () {
+			window.localStorage.setItem(e.name, e.value);
+		})
+	})
+
+});
+
+
 
 
 // Кнопка для редактирования. Появляется окошко COMPLETED
