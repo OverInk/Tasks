@@ -32,18 +32,16 @@ form__newtask.addEventListener("submit", function (eventt) {
 	eventt.preventDefault();
 
 	const taskName = document.getElementById('task-name').value;
+	const taskLine = document.querySelector('.task__line');
 	const divMine = document.createElement('div');
-	divMine.classList.add('task-line');
+	divMine.classList.add('task__line');
+	divMine.innerHTML = taskLine.innerHTML;
 	const divText = document.createElement('div');
 	divText.classList.add('task__name-text');
-	const divTest = document.createElement('div');
-	divTest.classList.add('task__process');
 
-	divText.textContent = taskName;
-	divMine.appendChild(divText);
+	divMine.querySelector('.task__name-text').textContent = document.getElementById('task-name').value;
+
 	holdList.appendChild(divMine);
-	divTest.textContent = 'Pending';
-	holdList.appendChild(divTest);
 
 	form__newtask.reset();
 });
