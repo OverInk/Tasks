@@ -27,35 +27,53 @@ document.addEventListener('click', (e) => {
 // const button__task = document.querySelector('.button__new-task');
 // const form__newtask = document.querySelector('.js__button');
 const holdList = document.querySelector('.hold');
+const taskInput = document.getElementById('task-name');
+
+let tasks = JSON.parse(localStorage.getItem('tasks')) || [];
+
+
+// form__newtask.addEventListener("submit", function (eventt) {
+// 	eventt.preventDefault();
+
+// 	const taskLine = document.querySelector('.task__line');
+// 	const divMine = document.createElement('div');
+// 	divMine.classList.add('task__line');
+// 	divMine.innerHTML = taskLine.innerHTML;
+// 	const divText = document.createElement('div');
+// 	divText.classList.add('task__name-text');
+
+// 	divMine.querySelector('.task__name-text').textContent = document.getElementById('task-name').value;
+
+// 	holdList.appendChild(divMine);
+
+// 	form__newtask.reset();
+// if (tasks.length < 3) {
+// 	tasks.forEach(function (task) {
+// 		addTask(task);
+// 	});
+// }
 
 form__newtask.addEventListener("submit", function (eventt) {
 	eventt.preventDefault();
+	const task = taskInput.value.trim();
+	if (task !== '') {
+		addTask(task);
+		form__newtask.reset();
+	}
+});
 
+function addTask(task) {
+	const divInput = document.createElement('div');
+	divInput.textContent = task;
+	divInput.classList.add('task__name-text');
 	const taskLine = document.querySelector('.task__line');
 	const divMine = document.createElement('div');
-	divMine.classList.add('task__line');
 	divMine.innerHTML = taskLine.innerHTML;
-	const divText = document.createElement('div');
-	divText.classList.add('task__name-text');
-
-	divMine.querySelector('.task__name-text').textContent = document.getElementById('task-name').value;
-
+	divMine.querySelector('.task__name-text').innerHTML = task;
 	holdList.appendChild(divMine);
-
-	form__newtask.reset();
-
-});
-// Попытка сохранить новые задачи (ПРОВАЛ)
-document.addEventListener("DOMContentLoaded", function () {
-	document.querySelectorAll('textarea, input').forEach(function (e) {
-		if (e.value === '') e.value = window.localStorage.getItem(e.name, e.value);
-		e.addEventListener('input', function () {
-			window.localStorage.setItem(e.name, e.value);
-		})
-	})
-
-});
-
+	tasks.push(task);
+	localStorage.setItem('tasks', JSON.stringify(tasks));
+}
 
 
 
