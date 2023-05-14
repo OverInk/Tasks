@@ -47,12 +47,14 @@ let tasks = JSON.parse(localStorage.getItem('tasks')) || [];
 // 	holdList.appendChild(divMine);
 
 // 	form__newtask.reset();
-// if (tasks.length < 3) {
+
+
+// if (tasks.length < 1000) {
 // 	tasks.forEach(function (task) {
 // 		addTask(task);
 // 	});
 // }
-
+// НЕУДАВШАЯ ПОПЫТКА
 form__newtask.addEventListener("submit", function (eventt) {
 	eventt.preventDefault();
 	const task = taskInput.value.trim();
@@ -68,8 +70,9 @@ function addTask(task) {
 	divInput.classList.add('task__name-text');
 	const taskLine = document.querySelector('.task__line');
 	const divMine = document.createElement('div');
+	divMine.classList.add('task__line');
 	divMine.innerHTML = taskLine.innerHTML;
-	divMine.querySelector('.task__name-text').innerHTML = task;
+	divMine.querySelector('.task__name-text').textContent = task;
 	holdList.appendChild(divMine);
 	tasks.push(task);
 	localStorage.setItem('tasks', JSON.stringify(tasks));
