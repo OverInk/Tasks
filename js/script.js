@@ -121,9 +121,6 @@ function searchByFirstLetter(event) {
 	});
 }
 
-// назначаем обработчик события на кнопку поиска
-searchBtn.addEventListener('click', searchByFirstLetter);
-
 
 // СМЕНА ТЕМЫ НА ТЕМНУЮ И НАОБОРОТ ( с сохранением выбора)===========
 let changeTemaBtn = document.querySelectorAll('.change-tema');
