@@ -147,3 +147,20 @@ if (activeTheme === null || activeTheme === 'light') {
 } else if (activeTheme === 'dark') {
 	applyTheme('dark');
 };
+
+
+//
+const spisok = document.querySelectorAll('.spisok');
+document.addEventListener("click", function (e) {
+	spisok.forEach(function (drop) {
+		if (!drop.contains(e.target) && !e.target.closest('.spisok button')) {
+			spisok.querySelector('ul').classList.remove('show');
+		};
+	});
+});
+
+spisok.forEach(function (event) {
+	event.querySelector('button').addEventListener("click", function (ev) {
+		event.querySelector('ul').classList.toggle('show');
+	});
+});

@@ -144,6 +144,19 @@ h1{
 	width: 87px;
 }
 
+.spisok{
+	width: 5%;
+	height: 22px;
+	background: #F2F2F2;
+	border-radius: 50%;
+}
+.spisok ul{
+	display: none;
+}
+.spisok ul.show{
+	display: block;
+}
+
 .close__after-js{
 	position: absolute;
    top: 41%;
@@ -318,10 +331,10 @@ h1{
 }
 // КНОПКА РЕГУЛИРОВКИ ДЛЯ ДВУХ БЛОКОВ
 .button__edit{
-	width: 5%;
-	height: 22px;
-	background: #F2F2F2;
-	border-radius: 50%;
+	// width: 5%;
+	// height: 22px;
+	// background: #F2F2F2;
+	// border-radius: 50%;
 }
 .edit-none{
 	visibility: hidden;

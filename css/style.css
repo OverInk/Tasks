@@ -199,6 +199,21 @@ h1 {
   width: 87px;
 }
 
+.spisok {
+  width: 5%;
+  height: 22px;
+  background: #F2F2F2;
+  border-radius: 50%;
+}
+
+.spisok ul {
+  display: none;
+}
+
+.spisok ul.show {
+  display: block;
+}
+
 .close__after-js {
   position: absolute;
   top: 41%;
@@ -363,13 +378,6 @@ h1 {
 
 .statys-critical {
   border: 2px solid #EB5757;
-}
-
-.button__edit {
-  width: 5%;
-  height: 22px;
-  background: #F2F2F2;
-  border-radius: 50%;
 }
 
 .edit-none {
