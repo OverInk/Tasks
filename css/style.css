@@ -200,10 +200,11 @@ h1 {
 }
 
 .spisok {
-  width: 5%;
+  list-style: none;
   height: 22px;
   background: #F2F2F2;
   border-radius: 50%;
+  position: relative;
 }
 
 .spisok ul {
@@ -214,31 +215,49 @@ h1 {
   display: block;
 }
 
+.edit-none {
+  visibility: hidden;
+}
+
+.button__edit-tochka {
+  position: relative;
+  height: 3px;
+  width: 3px;
+  margin: 0 auto;
+  background: #DCD9D9;
+  border-radius: 50%;
+}
+
 .close__after-js {
   position: absolute;
-  top: 41%;
-  right: 15%;
-  width: 100px;
-  height: 20px;
-  background: white;
-  opacity: 0;
-  pointer-events: none;
-  transition: 0.5s all;
-  border: 2px solid gray;
-  text-align: center;
-  margin: 0 auto;
+  right: -26px;
+  top: 24px;
 }
 
-.close__after-js.active {
-  opacity: 1;
-  pointer-events: all;
-  transition: 0.5s all;
-  z-index: 100;
-  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+.button__edit-tochka::after {
+  content: "";
+  display: block;
+  transform: translate(5px, -3px);
+  background: #DCD9D9;
+  height: 3px;
+  width: 3px;
+  border-radius: 50%;
 }
 
-.close__after-js:hover {
-  background-color: gray;
+.button__edit-tochka::before {
+  content: "";
+  display: block;
+  transform: translateX(-5px);
+  background: #DCD9D9;
+  height: 3px;
+  width: 3px;
+  border-radius: 50%;
+}
+
+.close__after-js li {
+  padding: 3px 0px;
+  border: 1px solid gray;
+  display: list-item;
 }
 
 .hold {
@@ -378,38 +397,6 @@ h1 {
 
 .statys-critical {
   border: 2px solid #EB5757;
-}
-
-.edit-none {
-  visibility: hidden;
-}
-
-.button__edit-tochka {
-  height: 3px;
-  width: 3px;
-  margin: 0 auto;
-  background: #DCD9D9;
-  border-radius: 50%;
-}
-
-.button__edit-tochka::after {
-  content: "";
-  display: block;
-  transform: translate(5px, -3px);
-  background: #DCD9D9;
-  height: 3px;
-  width: 3px;
-  border-radius: 50%;
-}
-
-.button__edit-tochka::before {
-  content: "";
-  display: block;
-  transform: translateX(-5px);
-  background: #DCD9D9;
-  height: 3px;
-  width: 3px;
-  border-radius: 50%;
 }
 
 @media screen and (min-width: 1501px) and (max-width: 1920px) {

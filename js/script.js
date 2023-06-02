@@ -79,21 +79,6 @@ function addTask(task) {
 }
 
 
-
-// Кнопка для редактирования. Появляется окошко COMPLETED
-const editTask = document.querySelector('.button__edit');
-const completedTask = document.querySelector('.close__after-js');
-
-editTask.addEventListener('click', function (e) {
-	e.preventDefault(); // Убирается дефолтное поведение браузера
-	completedTask.classList.add('active');
-});
-document.addEventListener('click', (e) => {
-	if (e.target === editTask) {
-		completedTask.classList.remove('active');
-	}
-});
-
 // ПОПЫТКА ПОИСКА
 const searchInput = document.getElementById('input-search');
 const searchBtn = document.getElementById('search-btn');
