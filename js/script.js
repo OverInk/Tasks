@@ -138,7 +138,7 @@ if (activeTheme === null || activeTheme === 'light') {
 const spisok = document.querySelectorAll('.spisok');
 document.addEventListener("click", function (e) {
 	spisok.forEach(function (drop) {
-		if (!drop.contains(e.target) && !e.target.closest('.spisok button')) {
+		if (!drop.contains(e.target) && !e.target.closest('.button__edit')) {
 			spisok.querySelector('ul').classList.remove('show');
 		};
 	});

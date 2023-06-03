@@ -213,6 +213,10 @@ h1 {
 
 .spisok ul.show {
   display: block;
+  position: absolute;
+  right: -26px;
+  top: 24px;
+  z-index: 4;
 }
 
 .edit-none {
@@ -226,12 +230,6 @@ h1 {
   margin: 0 auto;
   background: #DCD9D9;
   border-radius: 50%;
-}
-
-.close__after-js {
-  position: absolute;
-  right: -26px;
-  top: 24px;
 }
 
 .button__edit-tochka::after {
@@ -254,9 +252,15 @@ h1 {
   border-radius: 50%;
 }
 
+.button__edit {
+  height: 22px;
+  width: 22px;
+  border-radius: 50%;
+}
+
 .close__after-js li {
-  padding: 3px 0px;
-  border: 1px solid gray;
+  padding: 3px 5px;
+  border: 1px solid #a99c9c;
   display: list-item;
 }
 
