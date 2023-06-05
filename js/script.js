@@ -149,3 +149,11 @@ spisok.forEach(function (event) {
 		event.querySelector('ul').classList.toggle('show');
 	});
 });
+
+const closeList = document.querySelectorAll('.close-list');
+closeList.forEach(function (event) {
+	event.addEventListener('click', function (e) {
+		const list = event.closest('.close__after-js');
+		list.classList.remove('show');
+	});
+});

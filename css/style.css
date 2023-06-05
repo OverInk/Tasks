@@ -262,6 +262,12 @@ h1 {
   padding: 3px 5px;
   border: 1px solid #a99c9c;
   display: list-item;
+  background: #FFFFFF;
+  cursor: pointer;
+}
+
+.close__after-js li:hover {
+  background-color: #d5d5d5;
 }
 
 .hold {
