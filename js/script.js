@@ -166,6 +166,9 @@ const completed = document.querySelector('.completed');
 completedList.forEach(function (event) {
 	event.addEventListener("click", function (e) {
 		const taskLine = event.closest('.task__line');
+		const closeJs = event.closest('.spisok');
+		closeJs.style.visibility = "hidden";
+		taskLine.style.opacity = "0.2";
 		completed.insertAdjacentElement('beforeend', taskLine);
 	});
 });
