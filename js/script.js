@@ -157,3 +157,15 @@ closeList.forEach(function (event) {
 		list.classList.remove('show');
 	});
 });
+
+
+const completedList = document.querySelectorAll('.completed-list');
+const hold = document.querySelector('.hold');
+const completed = document.querySelector('.completed');
+
+completedList.forEach(function (event) {
+	event.addEventListener("click", function (e) {
+		const taskLine = event.closest('.task__line');
+		completed.insertAdjacentElement('beforeend', taskLine);
+	});
+});
