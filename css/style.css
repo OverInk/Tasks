@@ -416,9 +416,6 @@ h1 {
   .task__statys {
     width: 60%;
   }
-  .button__edit {
-    width: 4%;
-  }
   .js__button {
     top: 33%;
     left: 18%;
@@ -474,6 +471,9 @@ h1 {
   .title__tasks {
     padding: 0px 0px 49px 108px;
   }
+  .task__name {
+    width: 72%;
+  }
   .task__statys {
     width: 22%;
   }
@@ -484,6 +484,9 @@ h1 {
   }
 }
 @media screen and (max-width: 900px) {
+  .task__name {
+    width: 95%;
+  }
   .title__tasks {
     flex-wrap: wrap;
     flex-direction: column;
@@ -501,18 +504,12 @@ h1 {
   .task__name {
     padding-bottom: 10px;
   }
-  .button__edit {
-    width: 5%;
-  }
   .js__button {
     left: 19%;
     width: 61%;
   }
 }
 @media screen and (max-width: 750px) {
-  .button__edit {
-    width: 6%;
-  }
   .js__button {
     top: 24%;
     left: 22%;
